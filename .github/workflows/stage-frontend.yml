@@ -6,6 +6,7 @@ on:
       - CB-31-deploy
     paths:
       - frontend/**
+      - stage-frontend
 
 jobs:
   build:
