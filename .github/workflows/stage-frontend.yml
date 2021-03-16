@@ -3,7 +3,7 @@ name: Deploy Front End Stage To Heroku
 on:
   push:
     branches:
-      - CB-31-deploy
+      - CB-33_company-input-placeholder
     paths:
       - frontend/**
       - .github/workflows/stage-frontend.yml
