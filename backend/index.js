@@ -1,6 +1,20 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
+const cors = require("cors");
+
+// Allow chatterus website to use the API
+const corsConfig = cors({
+    origin: [
+        "http://localhost:3000", 
+        "https://stock-decider-frontend-stage.herokuapp.com", 
+        "https://stock-decider.herokuapp.com"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"], 
+});
+app.use(corsConfig);
 
 require('dotenv').config();
 app.use(express.json())
