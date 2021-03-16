@@ -9,7 +9,7 @@ const port = process.env.PORT || 8080;
 
 const finnhub = require('finnhub');
 const finnhub_api_key = finnhub.ApiClient.instance.authentications['api_key'];
-finnhub_api_key.apiKey = process.env.FINNHUB_API_KEY;
+finnhub_api_key.apiKey = "c17vhuf48v6reqlb4t20";
 const finnhubClient = new finnhub.DefaultApi();
 
 app.get('/',(req,res)=>{
@@ -71,7 +71,7 @@ app.get('/getNews', (req, res) => {
 
     var from = weekAgo.toISOString().split("T")[0];
     var to = today.toISOString().split("T")[0];
-    axios.get(`https://finnhub.io/api/v1/company-news?symbol=${company}&from=${from}&to=${to}&token=${process.env.FINNHUB_API_KEY}`)
+    axios.get(`https://finnhub.io/api/v1/company-news?symbol=${company}&from=${from}&to=${to}&token=${finnhub_api_key.apiKey}`)
         .then(response => {
             res.status(200).json(response.data);
         }).catch((error)=>{
