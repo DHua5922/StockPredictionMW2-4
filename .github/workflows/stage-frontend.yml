@@ -19,3 +19,4 @@ jobs:
           heroku_app_name: "stock-decider-frontend-stage" #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           usedocker: true
+          appdir: "frontend"
