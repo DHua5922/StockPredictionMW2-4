@@ -16,6 +16,9 @@ COPY . .
  
 # Uses port which is used by the actual application
 EXPOSE 3000
- 
+
+# Create production folder
+RUN npm run build
+
 # Finally runs the application
 CMD [ "npm", "start" ]

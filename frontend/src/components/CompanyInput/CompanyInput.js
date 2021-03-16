@@ -28,7 +28,7 @@ export default class CompanyInput extends Component {
                 <FormGroup>
                     <InputGroup>
                         <Input 
-                            placeholder="Enter company name" 
+                            placeholder="Enter company name (ex: AAPL)" 
                             onChange={(event) => 
                                 this.setState({
                                     companyName: event.target.value
