@@ -1,5 +1,5 @@
 export const BASE_URL = (process.env.NODE_ENV === 'production') 
-    ? "https://stock-decider-backend-stage.herokuapp.com" 
+    ? "https://stock-decider-backend.herokuapp.com" 
     : "http://localhost:8080";
 
 export const NEWS_API_URL = "/getNews?company=";
