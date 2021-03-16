@@ -3,7 +3,7 @@ name: Deploy Front End Production To Heroku
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - frontend/**
       - .github/workflows/production-frontend.yml
