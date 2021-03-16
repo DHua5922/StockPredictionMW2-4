@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - backend/**
-      - production-backend
+      - .github/workflows/production-backend.yml
 
 jobs:
   build:

@@ -6,7 +6,7 @@ on:
       - CB-31-deploy
     paths:
       - backend/**
-      - stage-backend
+      - .github/workflows/stage-backend.yml
 
 jobs:
   build:

@@ -6,7 +6,7 @@ on:
       - CB-31-deploy
     paths:
       - frontend/**
-      - stage-frontend
+      - .github/workflows/stage-frontend.yml
 
 jobs:
   build:
